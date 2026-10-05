@@ -1,0 +1,224 @@
+........................................................................ [ 59%]
+.................................................                        [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  <repo>\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+.venv\Lib\site-packages\starlette\testclient.py:53
+  <repo>\.venv\Lib\site-packages\starlette\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+.venv\Lib\site-packages\evidently\legacy\tests\utils.py:183
+.venv\Lib\site-packages\evidently\legacy\tests\utils.py:183
+  <repo>\.venv\Lib\site-packages\evidently\legacy\tests\utils.py:183: DeprecationWarning: numpy.core is deprecated and has been renamed to numpy._core. The numpy._core namespace contains private NumPy internals and its use is discouraged, as NumPy internals can change without warning in any release. In practice, most real-world usage of numpy.core is to access functionality in the public NumPy API. If that is the case, use the public NumPy API. If not, you are using NumPy internals. If you would still like to access an internal attribute, use numpy._core.numeric.
+    np.core.numeric.ScalarType = np.core.numeric.ScalarType + (ApproxValue, ApproxValueNoDict)  # type: ignore[attr-defined]
+
+.venv\Lib\site-packages\litestar\utils\deprecation.py:99
+.venv\Lib\site-packages\litestar\utils\deprecation.py:99
+.venv\Lib\site-packages\litestar\utils\deprecation.py:99
+.venv\Lib\site-packages\litestar\utils\deprecation.py:99
+  <repo>\.venv\Lib\site-packages\litestar\utils\deprecation.py:99: LitestarDeprecationWarning: Call to deprecated function 'Dependency'. Deprecated in litestar 2.23.0. This function will be removed in 3.0. Use 'di.NamedDependency' instead
+    warn_deprecation(
+
+.venv\Lib\site-packages\litestar\params.py:538
+.venv\Lib\site-packages\litestar\params.py:538
+.venv\Lib\site-packages\litestar\params.py:538
+.venv\Lib\site-packages\litestar\params.py:538
+  <repo>\.venv\Lib\site-packages\litestar\params.py:538: LitestarDeprecationWarning: Use of deprecated class 'DependencyKwarg'. Deprecated in litestar 2.23.0. This class will be removed in 3.0. Use 'di.NamedDependency' instead
+    warn_deprecation(
+
+tests/test_candidates.py::test_generate_candidates_chunked_is_deterministic_with_fixed_seed
+  <repo>\tests\test_candidates.py:53: DeprecationWarning: the string cache has been replaced by pl.Categories
+    pl.enable_string_cache()
+
+tests/test_candidates.py: 12 warnings
+  <repo>\src\candidates.py:86: DeprecationWarning: `is_in` with a collection of the same datatype is ambiguous and deprecated.
+  Please use `implode` to return to previous behavior.
+  
+  See https://github.com/pola-rs/polars/issues/22149 for more information.
+    .collect(engine="streaming")
+
+tests/test_candidates.py: 12 warnings
+  <repo>\src\candidates.py:137: DeprecationWarning: `is_in` with a collection of the same datatype is ambiguous and deprecated.
+  Please use `implode` to return to previous behavior.
+  
+  See https://github.com/pola-rs/polars/issues/22149 for more information.
+    .collect(engine="streaming")
+
+tests/test_candidates.py: 12 warnings
+  <repo>\src\candidates.py:177: DeprecationWarning: `is_in` with a collection of the same datatype is ambiguous and deprecated.
+  Please use `implode` to return to previous behavior.
+  
+  See https://github.com/pola-rs/polars/issues/22149 for more information.
+    .collect(engine="streaming")
+
+tests/test_candidates.py: 12 warnings
+  <repo>\src\candidates.py:227: DeprecationWarning: `is_in` with a collection of the same datatype is ambiguous and deprecated.
+  Please use `implode` to return to previous behavior.
+  
+  See https://github.com/pola-rs/polars/issues/22149 for more information.
+    .collect(engine="streaming")
+
+tests/test_candidates.py: 12 warnings
+  <repo>\src\candidates.py:293: DeprecationWarning: `is_in` with a collection of the same datatype is ambiguous and deprecated.
+  Please use `implode` to return to previous behavior.
+  
+  See https://github.com/pola-rs/polars/issues/22149 for more information.
+    codes = codes.filter(pl.col("customer_id").is_in(customer_ids))
+
+tests/test_candidates.py::test_pool_candidates_rank_columns_null_where_strategy_absent
+  <repo>\tests\test_candidates.py:89: DeprecationWarning: the string cache has been replaced by pl.Categories
+    pl.enable_string_cache()
+
+tests/test_dataset.py::test_assemble_training_labels_negative_sampling_is_deterministic
+  <repo>\tests\test_dataset.py:42: DeprecationWarning: the string cache has been replaced by pl.Categories
+    pl.enable_string_cache()
+
+tests/test_dataset.py::test_assemble_training_labels_customer_with_no_positive_contributes_no_rows
+  <repo>\tests\test_dataset.py:55: DeprecationWarning: the string cache has been replaced by pl.Categories
+    pl.enable_string_cache()
+
+tests/test_dataset.py::test_assemble_training_labels_negative_ratio_and_positive_flag
+  <repo>\tests\test_dataset.py:65: DeprecationWarning: the string cache has been replaced by pl.Categories
+    pl.enable_string_cache()
+
+tests/test_features.py::test_customer_features_excludes_on_window_transaction
+  <repo>\tests\test_features.py:57: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py: 27 warnings
+tests/test_leakage.py: 1 warning
+  <repo>\src\features.py:95: DeprecationWarning:
+  
+  `is_in` with a collection of the same datatype is ambiguous and deprecated.
+  Please use `implode` to return to previous behavior.
+  
+  See https://github.com/pola-rs/polars/issues/22149 for more information.
+
+tests/test_features.py: 81 warnings
+tests/test_leakage.py: 3 warnings
+  <repo>\src\features.py:105: DeprecationWarning:
+  
+  `is_in` with a collection of the same datatype is ambiguous and deprecated.
+  Please use `implode` to return to previous behavior.
+  
+  See https://github.com/pola-rs/polars/issues/22149 for more information.
+
+tests/test_features.py::test_article_features_excludes_on_window_transaction
+  <repo>\tests\test_features.py:75: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_article_features_wow_trend_is_negative_without_underflow
+  <repo>\tests\test_features.py:94: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_customer_article_pair_features_same_product_code_and_price_ratio
+  <repo>\tests\test_features.py:128: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py: 26 warnings
+  <repo>\src\features.py:237: DeprecationWarning:
+  
+  `is_in` with a collection of the same datatype is ambiguous and deprecated.
+  Please use `implode` to return to previous behavior.
+  
+  See https://github.com/pola-rs/polars/issues/22149 for more information.
+
+tests/test_features.py::test_customer_features_price_aggregation_is_deterministic_across_two_runs
+  <repo>\tests\test_features.py:212: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_article_features_price_aggregation_is_deterministic_across_two_runs
+  <repo>\tests\test_features.py:225: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_customer_recent_text_mean_is_deterministic_across_two_runs
+  <repo>\tests\test_features.py:244: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_customer_article_pair_features_content_checksum_invariant_to_batch_size
+  <repo>\tests\test_features.py:263: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_assemble_partition_features_content_checksum_invariant_to_batch_size
+  <repo>\tests\test_features.py:304: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_candidate_provenance_features_flags
+  <repo>\tests\test_features.py:321: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_assemble_partition_features_batching_preserves_all_rows
+  <repo>\tests\test_features.py:382: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_assemble_partition_features_write_dir_produces_readable_files
+  <repo>\tests\test_features.py:397: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_customer_features_chunked_is_deterministic_across_two_runs
+  <repo>\tests\test_features.py:440: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_customer_features_chunked_equals_unchunked
+  <repo>\tests\test_features.py:449: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_customer_recent_text_mean_chunked_is_deterministic_across_two_runs
+  <repo>\tests\test_features.py:460: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_features.py::test_customer_recent_text_mean_chunked_equals_unchunked
+  <repo>\tests\test_features.py:469: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_leakage.py::test_features_never_use_transactions_on_or_after_window_start
+  <repo>\tests\test_leakage.py:14: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_leakage.py::test_validation_window_transactions_never_become_training_positives
+  <repo>\tests\test_leakage.py:74: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_leakage.py::test_no_feature_is_derived_from_label
+  <repo>\tests\test_leakage.py:107: DeprecationWarning:
+  
+  the string cache has been replaced by pl.Categories
+
+tests/test_nbo.py::test_eligibility_requires_recent_sale_and_excludes_recent_purchase
+  <repo>\src\nbo.py:100: DeprecationWarning:
+  
+  `is_in` with a collection of the same datatype is ambiguous and deprecated.
+  Please use `implode` to return to previous behavior.
+  
+  See https://github.com/pola-rs/polars/issues/22149 for more information.
+
+tests/test_rank.py::test_train_ranker_is_deterministic_across_two_runs
+tests/test_rank.py::test_train_ranker_is_deterministic_across_two_runs
+tests/test_rank.py::test_train_classifier_is_deterministic_across_two_runs
+tests/test_rank.py::test_train_classifier_is_deterministic_across_two_runs
+  <repo>\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning:
+  
+  The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+121 passed, 239 warnings in 116.74s (0:01:56)

@@ -1,0 +1,17 @@
+transactions rows, min, max dates: [(31788324, datetime.date(2018, 9, 20), datetime.date(2020, 9, 22))]
+customers, articles, sample_sub: [(1371980,)] [(105542,)] [(1371980,)]
+pre-window rows: [(31548013,)]
+validation purchasers: [(68984,)]
+customers last purchased > 52w before 2020-09-22: [(368789,)]
+cand per customer min/mean/max, customers: [(25, 76.79799778422426, 100, 1371980)]
+popularity-only: [(15271,)]
+offers rows: [(642169,)]
+offer_store tables: [('served_top12',), ('metadata',), ('sqlite_stat1',)]
+offer_store served_top12 rows, customers: (16463760, 1371980) 2733539328
+feature_columns.json: 47
+{'orderings': {'ranker': {'map_at_12': 0.03400365392953492, 'customers_scored': 72019}, 'recent_popularity': {'map_at_12': 0.0066041043448108756, 'customers_scored': 72019}, 'candidate_pool_order': {'map_at_12': 0.012833773056507878, 'customers_scored': 72019}, 'oracle': {'map_at_12': 0.1149246019273373, 'customers_scored': 72019}}, 'ranker_ratio_vs': {'recent_popularity': 5.148866849181908, 'candidate_pool_order': 2.649544586756738, 'oracle': 0.2958779352660644}, 'wall_time_s': 14.4, 'peak_rss_gb': 2.79}
+evaluation/_backtest_train_manifest.json {'train_rows': 765688, 'fixed_iterations': 212, 'mlflow_run_id': '1a53efff501045ebafc9babf28f0d104', 'wall_time_s': 30.5, 'peak_rss_gb': 1.67}
+features/backtest_2020-09-09/_manifest.json {'window_start': '2020-09-09', 'partitions': 14, 'rows_written': 106092152, 'wall_time_s': 323.3, 'peak_rss_gb': 4.88, 'peak_uss_gb': 4.83}
+evaluation/_backtest_ranker_score_manifest.json {'total_rows_scored': 106092152, 'total_customers': 1371980, 'wall_time_s': 478.1, 'peak_rss_gb': 2.29}
+{'fit_rows': 21052210, 'eval_rows': 21076100, 'mean_raw_probability_full_pool': 0.07233162910509876, 'observed_positive_rate_full_pool': 0.00020513391517628139, 'eval_base_rate': 0.00019818657151939874, 'raw_brier': 0.011997194029390812, 'calibrated_brier': 0.0001977429201360792, 'constant_brier': 0.00019814729360226812, 'raw_brier_skill_score': -59.54684780844003, 'calibrated_brier_skill_score': 0.002040772088467868, 'classifier_run_id': '4c46f695a52b4947a9a50a2e051db723'}
+{'rows': 16463760, 'db_file_size_bytes': 2733539328, 'wall_time_s': 484.9, 'peak_rss_gb': 4.84}

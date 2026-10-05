@@ -1,0 +1,10 @@
+Session 1 (idle machine). Transcribed from the console output of harness.py and harness2.py; the raw output was not saved at the time.
+Run order: OPENBLAS_NUM_THREADS 1, 16, 1, 16. Ranker harness scored part-0034 then part-0000; probability harness scored part-0000 then part-0034.
+ranker OPENBLAS=1  {"import_s": 4.96, "model_load_s": 9.63, "part-0034": {"rows_scored": 923592, "wall_time_s": 2.8}, "part-0000": {"rows_scored": 3074263, "wall_time_s": 8.9}}
+ranker OPENBLAS=16 {"import_s": 3.93, "model_load_s": 7.28, "part-0034": {"rows_scored": 923592, "wall_time_s": 2.7}, "part-0000": {"rows_scored": 3074263, "wall_time_s": 8.7}}
+ranker OPENBLAS=1  {"import_s": 3.98, "model_load_s": 7.31, "part-0034": {"rows_scored": 923592, "wall_time_s": 2.7}, "part-0000": {"rows_scored": 3074263, "wall_time_s": 8.7}}
+ranker OPENBLAS=16 {"import_s": 3.96, "model_load_s": 7.46, "part-0034": {"rows_scored": 923592, "wall_time_s": 2.7}, "part-0000": {"rows_scored": 3074263, "wall_time_s": 8.7}}
+probability OPENBLAS=1  {"import_s": 4.05, "part-0000": {"rows": 480000, "wall_time_s": 9.0}, "part-0034": {"rows": 143760, "wall_time_s": 0.5}}
+probability OPENBLAS=16 {"import_s": 4.24, "part-0000": {"rows": 480000, "wall_time_s": 8.8}, "part-0034": {"rows": 143760, "wall_time_s": 0.5}}
+probability OPENBLAS=1  {"import_s": 4.11, "part-0000": {"rows": 480000, "wall_time_s": 8.7}, "part-0034": {"rows": 143760, "wall_time_s": 0.5}}
+probability OPENBLAS=16 {"import_s": 4.17, "part-0000": {"rows": 480000, "wall_time_s": 8.7}, "part-0034": {"rows": 143760, "wall_time_s": 0.5}}

@@ -1,0 +1,4 @@
+  The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+118 passed, 1 skipped, 239 warnings in 67.79s (0:01:07)

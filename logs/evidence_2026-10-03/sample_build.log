@@ -1,0 +1,35 @@
+{
+  "scoring_date": "2020-09-16",
+  "ranker_run_id": "0b49193fcf4a4a1e94a55bf1e55b5bb9",
+  "classifier_run_id": "6b322c05c2324ac6a81a8a7d08362fa4",
+  "rows": 21600,
+  "customers": 1800,
+  "customers_with_selected_offer": 738,
+  "customers_per_bucket": {
+    "last 1 week": 300,
+    "last 12 weeks": 300,
+    "last 4 weeks": 300,
+    "last 52 weeks": 300,
+    "more than 52 weeks ago": 300,
+    "never": 300
+  },
+  "file_size_bytes": 3465216,
+  "file_size_limit_bytes": 100000000,
+  "verified_equal_to_full_store_customers": 1800,
+  "selection": {
+    "per_bucket": 300,
+    "seed": "nbo-sample-2020-09-16",
+    "anchor_date": "2020-09-16"
+  },
+  "assumptions": {
+    "margin_rate": 0.5,
+    "contact_cost_multiplier": 0.001,
+    "median_trailing_4w_price": 0.022016949152542376,
+    "contact_cost": 2.2016949152542377e-05
+  },
+  "regenerate_command": "python -m pipelines.run_guarded_stage build_offer_store_sample",
+  "full_store_rows": 16463760,
+  "wall_time_s": 10.2,
+  "peak_rss_gb": 2.57
+}
+build_offer_store_sample: peak_rss_gb=2.57 within guard

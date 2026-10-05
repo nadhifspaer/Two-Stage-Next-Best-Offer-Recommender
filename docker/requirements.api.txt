@@ -1,0 +1,4 @@
+# runtime dependencies of api/main.py and src/score_pipeline.py, versions match requirements.lock.txt
+fastapi==0.141.1
+uvicorn==0.53.0
+prometheus-client==0.26.0

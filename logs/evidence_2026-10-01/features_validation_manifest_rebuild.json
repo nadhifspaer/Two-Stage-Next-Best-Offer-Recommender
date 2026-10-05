@@ -1,0 +1,289 @@
+{
+  "window_start": "2020-09-16",
+  "partitions": 35,
+  "rows_written": 105365317,
+  "wall_time_s": 523.0,
+  "peak_rss_gb": 3.87,
+  "peak_uss_gb": 3.77,
+  "parent_peak_rss_gb": 3.87,
+  "partition_peak_rss_gb": 3.46,
+  "parent_phases": {
+    "materialize_history": {
+      "start_rss_gb": 1.12,
+      "peak_rss_gb": 3.68,
+      "end_rss_gb": 3.68,
+      "wall_time_s": 1.1
+    },
+    "customer_features": {
+      "start_rss_gb": 3.68,
+      "peak_rss_gb": 3.68,
+      "end_rss_gb": 2.78,
+      "wall_time_s": 5.4
+    },
+    "article_features": {
+      "start_rss_gb": 2.78,
+      "peak_rss_gb": 3.49,
+      "end_rss_gb": 3.22,
+      "wall_time_s": 0.7
+    },
+    "customer_recent_text_mean": {
+      "start_rss_gb": 3.22,
+      "peak_rss_gb": 3.58,
+      "end_rss_gb": 3.58,
+      "wall_time_s": 6.0
+    },
+    "history_split": {
+      "start_rss_gb": 3.85,
+      "peak_rss_gb": 3.85,
+      "end_rss_gb": 3.67,
+      "wall_time_s": 6.0
+    }
+  },
+  "partition_reports": [
+    {
+      "partition": "part-0000.parquet",
+      "rows_written": 3074263,
+      "wall_time_s": 3.6,
+      "peak_rss_gb": 3.23,
+      "peak_uss_gb": 3.18
+    },
+    {
+      "partition": "part-0001.parquet",
+      "rows_written": 3067146,
+      "wall_time_s": 3.2,
+      "peak_rss_gb": 3.24,
+      "peak_uss_gb": 3.17
+    },
+    {
+      "partition": "part-0002.parquet",
+      "rows_written": 3073198,
+      "wall_time_s": 3.0,
+      "peak_rss_gb": 3.31,
+      "peak_uss_gb": 3.24
+    },
+    {
+      "partition": "part-0003.parquet",
+      "rows_written": 3076010,
+      "wall_time_s": 3.0,
+      "peak_rss_gb": 3.31,
+      "peak_uss_gb": 3.23
+    },
+    {
+      "partition": "part-0004.parquet",
+      "rows_written": 3069980,
+      "wall_time_s": 3.1,
+      "peak_rss_gb": 3.37,
+      "peak_uss_gb": 3.29
+    },
+    {
+      "partition": "part-0005.parquet",
+      "rows_written": 3074759,
+      "wall_time_s": 3.1,
+      "peak_rss_gb": 3.26,
+      "peak_uss_gb": 3.17
+    },
+    {
+      "partition": "part-0006.parquet",
+      "rows_written": 3081519,
+      "wall_time_s": 3.2,
+      "peak_rss_gb": 3.28,
+      "peak_uss_gb": 3.24
+    },
+    {
+      "partition": "part-0007.parquet",
+      "rows_written": 3071233,
+      "wall_time_s": 3.1,
+      "peak_rss_gb": 3.27,
+      "peak_uss_gb": 3.19
+    },
+    {
+      "partition": "part-0008.parquet",
+      "rows_written": 3067023,
+      "wall_time_s": 3.1,
+      "peak_rss_gb": 3.32,
+      "peak_uss_gb": 3.24
+    },
+    {
+      "partition": "part-0009.parquet",
+      "rows_written": 3072255,
+      "wall_time_s": 3.2,
+      "peak_rss_gb": 3.37,
+      "peak_uss_gb": 3.3
+    },
+    {
+      "partition": "part-0010.parquet",
+      "rows_written": 3073748,
+      "wall_time_s": 3.1,
+      "peak_rss_gb": 3.36,
+      "peak_uss_gb": 3.29
+    },
+    {
+      "partition": "part-0011.parquet",
+      "rows_written": 3074622,
+      "wall_time_s": 3.3,
+      "peak_rss_gb": 3.29,
+      "peak_uss_gb": 3.24
+    },
+    {
+      "partition": "part-0012.parquet",
+      "rows_written": 3068450,
+      "wall_time_s": 3.5,
+      "peak_rss_gb": 3.26,
+      "peak_uss_gb": 3.18
+    },
+    {
+      "partition": "part-0013.parquet",
+      "rows_written": 3069269,
+      "wall_time_s": 3.8,
+      "peak_rss_gb": 3.37,
+      "peak_uss_gb": 3.3
+    },
+    {
+      "partition": "part-0014.parquet",
+      "rows_written": 3068431,
+      "wall_time_s": 3.6,
+      "peak_rss_gb": 3.37,
+      "peak_uss_gb": 3.14
+    },
+    {
+      "partition": "part-0015.parquet",
+      "rows_written": 3074231,
+      "wall_time_s": 3.5,
+      "peak_rss_gb": 3.37,
+      "peak_uss_gb": 3.15
+    },
+    {
+      "partition": "part-0016.parquet",
+      "rows_written": 3072734,
+      "wall_time_s": 3.4,
+      "peak_rss_gb": 3.35,
+      "peak_uss_gb": 3.27
+    },
+    {
+      "partition": "part-0017.parquet",
+      "rows_written": 3067121,
+      "wall_time_s": 3.6,
+      "peak_rss_gb": 3.33,
+      "peak_uss_gb": 3.26
+    },
+    {
+      "partition": "part-0018.parquet",
+      "rows_written": 3074773,
+      "wall_time_s": 3.5,
+      "peak_rss_gb": 3.46,
+      "peak_uss_gb": 3.39
+    },
+    {
+      "partition": "part-0019.parquet",
+      "rows_written": 3077696,
+      "wall_time_s": 3.4,
+      "peak_rss_gb": 3.4,
+      "peak_uss_gb": 3.23
+    },
+    {
+      "partition": "part-0020.parquet",
+      "rows_written": 3073591,
+      "wall_time_s": 3.4,
+      "peak_rss_gb": 3.33,
+      "peak_uss_gb": 3.25
+    },
+    {
+      "partition": "part-0021.parquet",
+      "rows_written": 3072373,
+      "wall_time_s": 3.6,
+      "peak_rss_gb": 3.25,
+      "peak_uss_gb": 3.23
+    },
+    {
+      "partition": "part-0022.parquet",
+      "rows_written": 3064743,
+      "wall_time_s": 3.4,
+      "peak_rss_gb": 3.34,
+      "peak_uss_gb": 3.16
+    },
+    {
+      "partition": "part-0023.parquet",
+      "rows_written": 3070829,
+      "wall_time_s": 3.5,
+      "peak_rss_gb": 3.32,
+      "peak_uss_gb": 3.08
+    },
+    {
+      "partition": "part-0024.parquet",
+      "rows_written": 3076775,
+      "wall_time_s": 3.5,
+      "peak_rss_gb": 3.26,
+      "peak_uss_gb": 3.15
+    },
+    {
+      "partition": "part-0025.parquet",
+      "rows_written": 3072770,
+      "wall_time_s": 3.5,
+      "peak_rss_gb": 3.37,
+      "peak_uss_gb": 3.29
+    },
+    {
+      "partition": "part-0026.parquet",
+      "rows_written": 3073425,
+      "wall_time_s": 3.5,
+      "peak_rss_gb": 3.33,
+      "peak_uss_gb": 3.17
+    },
+    {
+      "partition": "part-0027.parquet",
+      "rows_written": 3068061,
+      "wall_time_s": 3.4,
+      "peak_rss_gb": 3.38,
+      "peak_uss_gb": 3.21
+    },
+    {
+      "partition": "part-0028.parquet",
+      "rows_written": 3068885,
+      "wall_time_s": 3.6,
+      "peak_rss_gb": 3.26,
+      "peak_uss_gb": 3.19
+    },
+    {
+      "partition": "part-0029.parquet",
+      "rows_written": 3066236,
+      "wall_time_s": 3.4,
+      "peak_rss_gb": 3.3,
+      "peak_uss_gb": 3.22
+    },
+    {
+      "partition": "part-0030.parquet",
+      "rows_written": 3067728,
+      "wall_time_s": 3.4,
+      "peak_rss_gb": 3.34,
+      "peak_uss_gb": 3.27
+    },
+    {
+      "partition": "part-0031.parquet",
+      "rows_written": 3072571,
+      "wall_time_s": 3.5,
+      "peak_rss_gb": 3.3,
+      "peak_uss_gb": 3.22
+    },
+    {
+      "partition": "part-0032.parquet",
+      "rows_written": 3070639,
+      "wall_time_s": 3.5,
+      "peak_rss_gb": 3.33,
+      "peak_uss_gb": 3.25
+    },
+    {
+      "partition": "part-0033.parquet",
+      "rows_written": 3074638,
+      "wall_time_s": 3.4,
+      "peak_rss_gb": 3.38,
+      "peak_uss_gb": 3.3
+    },
+    {
+      "partition": "part-0034.parquet",
+      "rows_written": 923592,
+      "wall_time_s": 1.4,
+      "peak_rss_gb": 2.47,
+      "peak_uss_gb": 2.39
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+hash_orig.json: scored features/validation, hashed 2026-10-01 before the rebuild (directory since deleted)
+hash_new.json: rebuilt features/validation, current builder
+files 209 209 name sets equal True
+rows 108199548 108199548
+row/col mismatches 0
+order-independent hash mismatches 0
+order-sensitive hash mismatches 209

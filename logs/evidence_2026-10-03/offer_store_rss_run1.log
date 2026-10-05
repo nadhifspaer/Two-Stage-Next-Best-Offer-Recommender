@@ -1,0 +1,58 @@
+{
+  "rows": 16463760,
+  "db_file_size_bytes": 2733142016,
+  "wall_time_s": 644.0,
+  "peak_rss_gb": 4.9,
+  "start_rss_gb": 0.44,
+  "phases": {
+    "load_transactions": {
+      "start_rss_gb": 0.44,
+      "peak_rss_gb": 2.15,
+      "end_rss_gb": 1.73,
+      "wall_time_s": 1.2
+    },
+    "transaction_lookups": {
+      "start_rss_gb": 1.73,
+      "peak_rss_gb": 1.77,
+      "end_rss_gb": 1.77,
+      "wall_time_s": 0.1
+    },
+    "top12_eligibility": {
+      "start_rss_gb": 1.77,
+      "peak_rss_gb": 3.33,
+      "end_rss_gb": 3.32,
+      "wall_time_s": 1.8
+    },
+    "strategy_provenance": {
+      "start_rss_gb": 3.32,
+      "peak_rss_gb": 4.86,
+      "end_rss_gb": 2.16,
+      "wall_time_s": 17.1
+    },
+    "enrich_strategies": {
+      "start_rss_gb": 2.16,
+      "peak_rss_gb": 4.82,
+      "end_rss_gb": 3.71,
+      "wall_time_s": 4.9
+    },
+    "selected_flag": {
+      "start_rss_gb": 3.71,
+      "peak_rss_gb": 3.96,
+      "end_rss_gb": 3.78,
+      "wall_time_s": 3.5
+    },
+    "sqlite_insert": {
+      "start_rss_gb": 3.78,
+      "peak_rss_gb": 4.09,
+      "end_rss_gb": 2.23,
+      "wall_time_s": 603.5
+    },
+    "sqlite_finalize": {
+      "start_rss_gb": 2.23,
+      "peak_rss_gb": 2.23,
+      "end_rss_gb": 2.23,
+      "wall_time_s": 11.8
+    }
+  }
+}
+build_offer_store: peak_rss_gb=4.9 within guard

@@ -1,0 +1,79 @@
+2026/10/03 13:42:45 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at <repo>\.venv\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+{
+  "fit_rows": 21052210,
+  "eval_rows": 21076100,
+  "mean_raw_probability_full_pool": 0.0723316291893359,
+  "observed_positive_rate_full_pool": 0.00020513391517628139,
+  "eval_base_rate": 0.00019818657151939874,
+  "raw_brier": 0.011997194798403546,
+  "calibrated_brier": 0.00019774291836624873,
+  "constant_brier": 0.00019814729360226812,
+  "raw_brier_skill_score": -59.54685168945561,
+  "calibrated_brier_skill_score": 0.002040781020360982,
+  "reliability_table": [
+    {
+      "bin": 0,
+      "n": 2107610,
+      "predicted_mean": 0.0,
+      "observed_rate": 0.0
+    },
+    {
+      "bin": 1,
+      "n": 2107610,
+      "predicted_mean": 1.5395212358271237e-06,
+      "observed_rate": 9.489421667196492e-07
+    },
+    {
+      "bin": 2,
+      "n": 2107610,
+      "predicted_mean": 9.096026587940287e-06,
+      "observed_rate": 1.3759661417434914e-05
+    },
+    {
+      "bin": 3,
+      "n": 2107610,
+      "predicted_mean": 4.855593215324916e-05,
+      "observed_rate": 4.649816616926281e-05
+    },
+    {
+      "bin": 4,
+      "n": 2107610,
+      "predicted_mean": 0.00010598845256026834,
+      "observed_rate": 9.726657208876406e-05
+    },
+    {
+      "bin": 5,
+      "n": 2107610,
+      "predicted_mean": 0.0001447138492949307,
+      "observed_rate": 0.00012573483709035354
+    },
+    {
+      "bin": 6,
+      "n": 2107610,
+      "predicted_mean": 0.00015586832887493074,
+      "observed_rate": 0.00014661156475818582
+    },
+    {
+      "bin": 7,
+      "n": 2107610,
+      "predicted_mean": 0.00020872516324743629,
+      "observed_rate": 0.00022015458267895862
+    },
+    {
+      "bin": 8,
+      "n": 2107610,
+      "predicted_mean": 0.00028747422038577497,
+      "observed_rate": 0.0002642803934314223
+    },
+    {
+      "bin": 9,
+      "n": 2107610,
+      "predicted_mean": 0.0011394430184736848,
+      "observed_rate": 0.0010666109953928857
+    }
+  ],
+  "classifier_run_id": "6b322c05c2324ac6a81a8a7d08362fa4",
+  "wall_time_s": 22.9,
+  "peak_rss_gb": 3.97
+}
+calibrate_classifier: peak_rss_gb=3.97 within guard

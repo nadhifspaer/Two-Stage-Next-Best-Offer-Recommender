@@ -1,0 +1,21 @@
+== determinism
+    eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+12 passed, 107 deselected, 143 warnings in 28.34s
+== full
+tests/test_rank.py::test_train_classifier_is_deterministic_across_two_runs
+tests/test_rank.py::test_train_classifier_is_deterministic_across_two_runs
+  <repo>\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning:
+  
+  The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_dashboard_local.py::test_success_renders_selected_offer_and_ranked_table
+FAILED tests/test_dashboard_local.py::test_unknown_customer_404_shows_warning_not_error
+FAILED tests/test_dashboard_local.py::test_api_unreachable_shows_error_and_summary_tab_still_renders[failure0]
+FAILED tests/test_dashboard_local.py::test_api_unreachable_shows_error_and_summary_tab_still_renders[failure1]
+FAILED tests/test_dashboard_local.py::test_http_500_shows_error_not_exception
+FAILED tests/test_dashboard_local.py::test_typed_unknown_id_after_success_shows_warning
+6 failed, 112 passed, 1 skipped, 239 warnings in 66.50s (0:01:06)

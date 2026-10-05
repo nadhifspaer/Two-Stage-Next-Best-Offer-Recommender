@@ -1,0 +1,59 @@
+<repo>\pipelines\build_offer_store.py:66: DeprecationWarning: the string cache has been replaced by pl.Categories
+  pl.enable_string_cache()
+{
+  "rows": 16463760,
+  "db_file_size_bytes": 2733158400,
+  "wall_time_s": 990.2,
+  "peak_rss_gb": 4.68,
+  "start_rss_gb": 0.45,
+  "phases": {
+    "load_transactions": {
+      "start_rss_gb": 0.45,
+      "peak_rss_gb": 2.03,
+      "end_rss_gb": 1.72,
+      "wall_time_s": 1.2
+    },
+    "transaction_lookups": {
+      "start_rss_gb": 1.72,
+      "peak_rss_gb": 1.76,
+      "end_rss_gb": 1.76,
+      "wall_time_s": 0.1
+    },
+    "top12_eligibility": {
+      "start_rss_gb": 1.76,
+      "peak_rss_gb": 3.21,
+      "end_rss_gb": 2.93,
+      "wall_time_s": 2.1
+    },
+    "strategy_provenance": {
+      "start_rss_gb": 2.93,
+      "peak_rss_gb": 4.68,
+      "end_rss_gb": 2.17,
+      "wall_time_s": 17.1
+    },
+    "enrich_strategies": {
+      "start_rss_gb": 2.17,
+      "peak_rss_gb": 4.66,
+      "end_rss_gb": 3.63,
+      "wall_time_s": 4.4
+    },
+    "selected_flag": {
+      "start_rss_gb": 3.63,
+      "peak_rss_gb": 3.9,
+      "end_rss_gb": 3.9,
+      "wall_time_s": 3.2
+    },
+    "sqlite_insert": {
+      "start_rss_gb": 3.9,
+      "peak_rss_gb": 4.21,
+      "end_rss_gb": 2.11,
+      "wall_time_s": 840.8
+    },
+    "sqlite_finalize": {
+      "start_rss_gb": 2.11,
+      "peak_rss_gb": 2.11,
+      "end_rss_gb": 2.11,
+      "wall_time_s": 121.3
+    }
+  }
+}

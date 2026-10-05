@@ -1,0 +1,142 @@
+01:24:09.193 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8641
+See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+01:24:14.309 | INFO    | Flow run 'gorgeous-baboon' - Beginning flow run 'gorgeous-baboon' for flow 'batch_score_flow'
+01:24:15.844 | INFO    | Task run 'validate_processed_tables-cb7' - validate_processed_tables: passed
+01:24:15.847 | INFO    | Task run 'validate_processed_tables-cb7' - Finished in state Completed()
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|6         | 1/15 [00:02<00:31,  2.22s/it] 13%|#3        | 2/15 [00:04<00:28,  2.22s/it] 20%|##        | 3/15 [00:06<00:26,  2.23s/it] 27%|##6       | 4/15 [00:08<00:24,  2.23s/it] 33%|###3      | 5/15 [00:11<00:22,  2.24s/it] 40%|####      | 6/15 [00:13<00:20,  2.25s/it] 47%|####6     | 7/15 [00:15<00:18,  2.25s/it] 53%|#####3    | 8/15 [00:17<00:15,  2.26s/it] 60%|######    | 9/15 [00:20<00:13,  2.26s/it] 67%|######6   | 10/15 [00:22<00:11,  2.26s/it] 73%|#######3  | 11/15 [00:24<00:09,  2.26s/it] 80%|########  | 12/15 [00:26<00:06,  2.26s/it] 87%|########6 | 13/15 [00:29<00:04,  2.26s/it] 93%|#########3| 14/15 [00:31<00:02,  2.26s/it]100%|##########| 15/15 [00:33<00:00,  2.27s/it]100%|##########| 15/15 [00:33<00:00,  2.25s/it]
+01:28:38.421 | INFO    | Task run 'generate_candidates-814' - generate_candidates: wall_time_s=262.3 peak_rss_gb=5.19
+01:28:38.424 | INFO    | Task run 'generate_candidates-814' - Finished in state Completed()
+01:36:57.395 | INFO    | Task run 'build_features-93a' - build_features: wall_time_s=499.0 peak_rss_gb=4.73
+01:36:57.398 | INFO    | Task run 'build_features-93a' - Finished in state Completed()
+01:47:44.280 | INFO    | Task run 'score_ranker_and_top12-72e' - score_ranker_and_top12: wall_time_s=646.9 peak_rss_gb=1.55
+01:47:44.283 | INFO    | Task run 'score_ranker_and_top12-72e' - Finished in state Completed()
+01:59:40.090 | INFO    | Task run 'score_validation_candidates_for_calibration_reuse-4ca' - score_validation_candidates_for_calibration_reuse: wall_time_s=715.8 peak_rss_gb=2.04
+01:59:40.097 | INFO    | Task run 'score_validation_candidates_for_calibration_reuse-4ca' - Finished in state Completed()
+02:06:58.065 | INFO    | Task run 'score_calibrated_probabilities-424' - score_calibrated_probabilities: wall_time_s=438.0 peak_rss_gb=1.41
+02:06:58.068 | INFO    | Task run 'score_calibrated_probabilities-424' - Finished in state Completed()
+02:07:14.544 | INFO    | Task run 'decision_layer-ecd' - decision_layer: wall_time_s=16.3 peak_rss_gb=4.44
+02:07:14.549 | INFO    | Task run 'decision_layer-ecd' - Finished in state Completed()
+02:14:14.457 | INFO    | Task run 'build_offer_store-bc6' - build_offer_store: wall_time_s=418.8 peak_rss_gb=6.01
+02:14:14.459 | ERROR   | Task run 'build_offer_store-bc6' - Task run failed with exception: MemoryBudgetExceeded('build_offer_store: peak_rss_gb=6.01 exceeds the 5.5 GB guard')
+Traceback (most recent call last):
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1021, in run_context
+    yield self
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1683, in run_task_sync
+    engine.call_task_fn(txn)
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1038, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 348, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "<repo>\pipelines\batch_score_flow.py", line 113, in build_offer_store_task
+    _log_report("build_offer_store", report)
+  File "<repo>\pipelines\batch_score_flow.py", line 50, in _log_report
+    memory_guard.check_peak_rss(name, report)
+  File "<repo>\src\memory_guard.py", line 30, in check_peak_rss
+    raise MemoryBudgetExceeded(
+src.memory_guard.MemoryBudgetExceeded: build_offer_store: peak_rss_gb=6.01 exceeds the 5.5 GB guard
+02:14:14.522 | ERROR   | Task run 'build_offer_store-bc6' - Finished in state Failed('Task run encountered an exception MemoryBudgetExceeded: build_offer_store: peak_rss_gb=6.01 exceeds the 5.5 GB guard')
+02:14:14.674 | ERROR   | Flow run 'gorgeous-baboon' - Encountered exception during execution: MemoryBudgetExceeded('build_offer_store: peak_rss_gb=6.01 exceeds the 5.5 GB guard')
+Traceback (most recent call last):
+  File "<repo>\.venv\Lib\site-packages\prefect\flow_engine.py", line 1319, in run_context
+    yield self
+  File "<repo>\.venv\Lib\site-packages\prefect\flow_engine.py", line 2089, in run_flow_sync
+    engine.call_flow_fn()
+  File "<repo>\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 348, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "<repo>\pipelines\batch_score_flow.py", line 134, in batch_score_flow
+    offer_store_report = build_offer_store_task()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\tasks.py", line 1227, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1916, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1686, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 617, in result
+    raise self._raised
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1021, in run_context
+    yield self
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1683, in run_task_sync
+    engine.call_task_fn(txn)
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1038, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 348, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "<repo>\pipelines\batch_score_flow.py", line 113, in build_offer_store_task
+    _log_report("build_offer_store", report)
+  File "<repo>\pipelines\batch_score_flow.py", line 50, in _log_report
+    memory_guard.check_peak_rss(name, report)
+  File "<repo>\src\memory_guard.py", line 30, in check_peak_rss
+    raise MemoryBudgetExceeded(
+src.memory_guard.MemoryBudgetExceeded: build_offer_store: peak_rss_gb=6.01 exceeds the 5.5 GB guard
+02:14:14.780 | INFO    | Flow run 'gorgeous-baboon' - Finished in state Failed('Flow run encountered an exception: MemoryBudgetExceeded: build_offer_store: peak_rss_gb=6.01 exceeds the 5.5 GB guard')
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<repo>\pipelines\batch_score_flow.py", line 155, in <module>
+    result = batch_score_flow(args.scoring_date)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\flows.py", line 1887, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\flow_engine.py", line 2246, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\flow_engine.py", line 2091, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\flow_engine.py", line 788, in result
+    raise self._raised
+  File "<repo>\.venv\Lib\site-packages\prefect\flow_engine.py", line 1319, in run_context
+    yield self
+  File "<repo>\.venv\Lib\site-packages\prefect\flow_engine.py", line 2089, in run_flow_sync
+    engine.call_flow_fn()
+  File "<repo>\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 348, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "<repo>\pipelines\batch_score_flow.py", line 134, in batch_score_flow
+    offer_store_report = build_offer_store_task()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\tasks.py", line 1227, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1916, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1686, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 617, in result
+    raise self._raised
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1021, in run_context
+    yield self
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1683, in run_task_sync
+    engine.call_task_fn(txn)
+  File "<repo>\.venv\Lib\site-packages\prefect\task_engine.py", line 1038, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 348, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "<repo>\pipelines\batch_score_flow.py", line 113, in build_offer_store_task
+    _log_report("build_offer_store", report)
+  File "<repo>\pipelines\batch_score_flow.py", line 50, in _log_report
+    memory_guard.check_peak_rss(name, report)
+  File "<repo>\src\memory_guard.py", line 30, in check_peak_rss
+    raise MemoryBudgetExceeded(
+src.memory_guard.MemoryBudgetExceeded: build_offer_store: peak_rss_gb=6.01 exceeds the 5.5 GB guard
+02:14:14.844 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8641

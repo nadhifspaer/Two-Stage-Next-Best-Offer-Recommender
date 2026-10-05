@@ -1,0 +1,47 @@
+# lint, test, schema check and image builds on push and pull request. Any failing step fails the run.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install ruff==0.16.10
+      - run: ruff check .
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install --index-url https://download.pytorch.org/whl/cpu torch==2.14.0+cpu
+      - run: pip install -r requirements.lock.txt
+      - name: Pandera schema validation against fixtures
+        run: pytest tests/test_schema.py -q
+      - name: Leakage tests
+        run: pytest tests/test_leakage.py -q
+      - name: Determinism tests
+        run: pytest -k "deterministic" -q
+      - name: Full test suite
+        run: pytest -q
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build API image
+        run: docker build -f docker/Dockerfile.api -t nbo-api:ci .
+      - name: Build dashboard image
+        run: docker build -f docker/Dockerfile.dashboard -t nbo-dashboard:ci .

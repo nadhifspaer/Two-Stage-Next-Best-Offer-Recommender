@@ -1,0 +1,16 @@
+# build context excludes data, model artifacts and local state; they are mounted as volumes
+data/
+mlruns/
+logs/
+reports/
+notebooks/
+.venv/
+venv/
+.git/
+.github/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+dashboard/sample/

@@ -1,0 +1,24 @@
+{
+  "window_start": "2020-09-16",
+  "total_customers": 1371980,
+  "uncapped_cap_argument": 10000,
+  "repurchase": {
+    "cap": 30,
+    "customers_with_candidates": 990583,
+    "customers_reaching_cap": 108639,
+    "raw_rows": 12810068,
+    "share_reaching_cap": 0.07918409889356988,
+    "mean_raw_per_customer_with_candidates": 12.931847205130715
+  },
+  "colour_variant": {
+    "cap": 30,
+    "customers_with_candidates": 969648,
+    "customers_reaching_cap": 578404,
+    "raw_rows": 71544774,
+    "share_reaching_cap": 0.42158340500590386,
+    "mean_raw_per_customer_with_candidates": 73.78427429335181
+  },
+  "wall_time_s": 71.8,
+  "peak_rss_gb": 3.2
+}
+report_cap_reach: peak_rss_gb=3.2 within guard

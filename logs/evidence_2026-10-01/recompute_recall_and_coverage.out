@@ -1,0 +1,9 @@
+true pairs 213728 hits 21614 pooled recall 0.1011
+repurchase recall 0.033 marginal(sole) 0.0261
+colour_variant recall 0.0211 marginal(sole) 0.0135
+recent_popularity recall 0.0339 marginal(sole) 0.0075
+segment_popularity recall 0.0359 marginal(sole) 0.009
+als recall 0.0142 marginal(sole) 0.0112
+candidates per customer min/mean/max, customers: (25, 76.79799778422426, 100, 1371980)
+popularity-only customers: 15271
+partition files: 35

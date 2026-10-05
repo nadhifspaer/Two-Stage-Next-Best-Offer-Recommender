@@ -1,0 +1,14 @@
+# image for dashboard/app.py in local mode. Data is mounted, never copied.
+FROM python:3.11-slim
+
+ENV OPENBLAS_NUM_THREADS=1 PYTHONUNBUFFERED=1 APP_MODE=local
+
+WORKDIR /app
+COPY docker/requirements.dashboard.txt .
+RUN pip install --no-cache-dir -r requirements.dashboard.txt
+
+COPY src/ src/
+COPY dashboard/ dashboard/
+
+EXPOSE 8501
+CMD ["streamlit", "run", "dashboard/app.py", "--server.address=0.0.0.0", "--server.port=8501", "--server.headless=true", "--browser.gatherUsageStats=false"]

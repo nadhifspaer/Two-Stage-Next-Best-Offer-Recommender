@@ -1,0 +1,43 @@
+{
+  "window_start": "2020-09-16",
+  "partitions": 35,
+  "rows_written": 105365317,
+  "wall_time_s": 523.0,
+  "peak_rss_gb": 3.92,
+  "peak_uss_gb": 3.77,
+  "parent_peak_rss_gb": 3.87,
+  "partition_peak_rss_gb": 3.46,
+  "parent_phases": {
+    "materialize_history": {
+      "start_rss_gb": 1.12,
+      "peak_rss_gb": 3.68,
+      "end_rss_gb": 3.68,
+      "wall_time_s": 1.1
+    },
+    "customer_features": {
+      "start_rss_gb": 3.68,
+      "peak_rss_gb": 3.68,
+      "end_rss_gb": 2.78,
+      "wall_time_s": 5.4
+    },
+    "article_features": {
+      "start_rss_gb": 2.78,
+      "peak_rss_gb": 3.49,
+      "end_rss_gb": 3.22,
+      "wall_time_s": 0.7
+    },
+    "customer_recent_text_mean": {
+      "start_rss_gb": 3.22,
+      "peak_rss_gb": 3.58,
+      "end_rss_gb": 3.58,
+      "wall_time_s": 6.0
+    },
+    "history_split": {
+      "start_rss_gb": 3.85,
+      "peak_rss_gb": 3.85,
+      "end_rss_gb": 3.67,
+      "wall_time_s": 6.0
+    }
+  }
+}
+within guard 3.92

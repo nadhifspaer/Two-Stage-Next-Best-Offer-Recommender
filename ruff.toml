@@ -1,0 +1,5 @@
+# rule selection and rationale: architecture.md Section 11, "Ruff scope"
+extend-exclude = ["mlruns", "logs", "data"]
+
+[lint]
+select = ["E4", "E7", "E9", "F"]

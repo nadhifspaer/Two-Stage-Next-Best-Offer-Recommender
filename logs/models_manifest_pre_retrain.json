@@ -1,0 +1,19 @@
+{
+  "train_rows": 1002471,
+  "wall_time_s": 101.0,
+  "peak_rss_gb": 3.2,
+  "mlflow_run_id": "4cffd33690c7422b958bc8bc323e299c",
+  "ranker_run_id": "edcaf7df60ec42989f61de4cb84b3e2a",
+  "classifier_run_id": "574291c68c36442f81d1f1a2dd8c0871",
+  "calibrator_path": "data\\processed\\models\\calibrator.joblib",
+  "ranker": {
+    "run_id": "edcaf7df60ec42989f61de4cb84b3e2a",
+    "best_iteration": 339,
+    "wall_time_s": 21.6
+  },
+  "classifier": {
+    "run_id": "574291c68c36442f81d1f1a2dd8c0871",
+    "best_iteration": 375,
+    "wall_time_s": 18.0
+  }
+}

@@ -1,0 +1,16 @@
+ranker OPENBLAS=1
+{"openblas": "1", "import_s": 17.02, "model_load_s": 16.46, "part-0034": {"rows_scored": 923592, "wall_time_s": 5.1, "total_s": 5.13}, "part-0000": {"rows_scored": 3074263, "wall_time_s": 16.0, "total_s": 15.97}}
+probability OPENBLAS=1
+{"openblas": "1", "import_s": 7.0, "part-0000": {"rows": 480000, "fresh": 289584, "wall_time_s": 14.7, "total_s": 14.93}, "part-0034": {"rows": 143760, "fresh": 85452, "wall_time_s": 0.9, "total_s": 1.2}}
+ranker OPENBLAS=16
+{"openblas": "16", "import_s": 6.2, "model_load_s": 11.96, "part-0034": {"rows_scored": 923592, "wall_time_s": 5.1, "total_s": 5.12}, "part-0000": {"rows_scored": 3074263, "wall_time_s": 15.7, "total_s": 15.97}}
+probability OPENBLAS=16
+{"openblas": "16", "import_s": 6.93, "part-0000": {"rows": 480000, "fresh": 289584, "wall_time_s": 13.9, "total_s": 14.0}, "part-0034": {"rows": 143760, "fresh": 85452, "wall_time_s": 0.8, "total_s": 0.91}}
+ranker OPENBLAS=1
+{"openblas": "1", "import_s": 6.75, "model_load_s": 11.5, "part-0034": {"rows_scored": 923592, "wall_time_s": 4.7, "total_s": 4.83}, "part-0000": {"rows_scored": 3074263, "wall_time_s": 15.6, "total_s": 15.68}}
+probability OPENBLAS=1
+{"openblas": "1", "import_s": 6.31, "part-0000": {"rows": 480000, "fresh": 289584, "wall_time_s": 13.8, "total_s": 13.84}, "part-0034": {"rows": 143760, "fresh": 85452, "wall_time_s": 0.8, "total_s": 0.91}}
+ranker OPENBLAS=16
+{"openblas": "16", "import_s": 5.64, "model_load_s": 12.02, "part-0034": {"rows_scored": 923592, "wall_time_s": 4.8, "total_s": 4.85}, "part-0000": {"rows_scored": 3074263, "wall_time_s": 15.4, "total_s": 15.67}}
+probability OPENBLAS=16
+{"openblas": "16", "import_s": 6.12, "part-0000": {"rows": 480000, "fresh": 289584, "wall_time_s": 13.7, "total_s": 13.91}, "part-0034": {"rows": 143760, "fresh": 85452, "wall_time_s": 0.9, "total_s": 1.21}}

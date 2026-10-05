@@ -1,0 +1,10 @@
+{
+  "tables_validated": [
+    "transactions_train",
+    "articles",
+    "customers",
+    "sample_submission"
+  ],
+  "peak_rss_gb": 2.31,
+  "wall_time_s": 4.2
+}
