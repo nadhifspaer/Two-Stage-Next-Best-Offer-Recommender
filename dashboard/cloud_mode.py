@@ -31,15 +31,10 @@ def _bucket_label(bucket: str) -> str:
 def run() -> None:
     store = _load_store()
     manifest = _load_manifest()
-    components.render_header("cloud, bundled sample", store.scoring_date, store.ranker_run_id, store.classifier_run_id)
+    st.title("H&M Next Best Offer")
     st.caption(
         f"Sample of the offer store: {manifest['customers']:,} customers, {manifest['rows']:,} rows, "
         f"{manifest['customers_per_bucket'][POPULARITY_ONLY_BUCKET]} of them with no purchase before the scoring date."
-    )
-
-    st.caption(
-        "Model pin: the run ids above match the pin embedded in this sample at build time. "
-        "The live production manifest is not available in this mode."
     )
 
     customers = score_pipeline.sample_customers(store)

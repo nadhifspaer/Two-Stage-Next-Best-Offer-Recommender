@@ -7,7 +7,6 @@ SIMULATION_NOTE = (
     "The offer layer is a simulation over two stated assumptions. It is validated against nothing, "
     "because the dataset has no record of offers sent."
 )
-PROBABILITY_NOTE = "Calibrated probability of purchasing the article in the scoring week (isotonic calibration)."
 
 
 def format_probability(p: float) -> str:
@@ -23,12 +22,15 @@ def render_header(mode: str, scoring_date: str, ranker_run_id: str, classifier_r
 
 
 def render_assumptions(assumptions: dict) -> None:
-    st.caption(
-        f"Assumptions: margin_rate {assumptions['margin_rate']}, contact_cost "
-        f"{assumptions['contact_cost_multiplier']} of the median trailing 4-week article price "
-        f"(median {assumptions['median_trailing_4w_price']:.6f}, contact_cost {assumptions['contact_cost']:.6f}). "
-        f"{PRICE_UNIT_NOTE} {SIMULATION_NOTE}"
-    )
+    items = [
+        f"margin_rate {assumptions['margin_rate']}",
+        f"contact_cost {assumptions['contact_cost_multiplier']} of the median trailing 4-week article price",
+        f"median trailing 4-week article price {assumptions['median_trailing_4w_price']:.6f}, "
+        f"giving contact_cost {assumptions['contact_cost']:.6f}",
+        PRICE_UNIT_NOTE,
+        SIMULATION_NOTE,
+    ]
+    st.caption("\n".join(f"- {item}" for item in items))
 
 
 def _strategy_text(strategies: list[str]) -> str:
@@ -65,6 +67,4 @@ def render_recommendation(result: dict, assumptions: dict) -> None:
         ]
     )
     st.dataframe(table, hide_index=True, width="stretch")
-    st.caption(
-        f"{PROBABILITY_NOTE} The ranker score is a relative lambdarank ordering score, not a probability."
-    )
+    st.caption("The ranker score is a relative lambdarank ordering score, not a probability.")
