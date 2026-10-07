@@ -1,6 +1,6 @@
 # H&M Next Best Offer Recommender
 
-**Live demo: PLACEHOLDER** (add the deployed Streamlit link here)
+**Live demo: https://two-stage-next-best-offer-recommender-croyeynkit6mhwn8gp9ksn.streamlit.app/**
 
 ## Introduction & Goals
 
