@@ -1,9 +1,8 @@
-# H&M Next Best Offer Recommender
+# Two-Stage Next Best Offer Recommender (H&M Personalized Fashion Recommendation)
 
 **Live demo: https://two-stage-next-best-offer-recommender-croyeynkit6mhwn8gp9ksn.streamlit.app/**
 
 ## Introduction & Goals
-
 This project recommends 12 articles to each of 1,371,980 customers and then decides, separately, whether to push a single offer to any of them. It runs on the H&M Personalized Fashion Recommendations dataset: 31.8 million transactions over two years across a catalogue of 105,542 articles.
 
 Scoring every customer against every article is roughly 145 billion pairs, far beyond what a ranking model can handle. So the work splits into three layers:
