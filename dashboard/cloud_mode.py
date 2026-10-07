@@ -31,7 +31,7 @@ def _bucket_label(bucket: str) -> str:
 def run() -> None:
     store = _load_store()
     manifest = _load_manifest()
-    st.title("H&M Next Best Offer")
+    st.title("Two-Stage Next Best Offer Recommender (H&M Personalized Fashion Recommendation)")
     st.caption(
         f"Sample of the offer store: {manifest['customers']:,} customers, {manifest['rows']:,} rows, "
         f"{manifest['customers_per_bucket'][POPULARITY_ONLY_BUCKET]} of them with no purchase before the scoring date."

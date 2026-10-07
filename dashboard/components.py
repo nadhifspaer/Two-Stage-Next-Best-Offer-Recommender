@@ -14,7 +14,7 @@ def format_probability(p: float) -> str:
 
 
 def render_header(mode: str, scoring_date: str, ranker_run_id: str, classifier_run_id: str) -> None:
-    st.title("H&M Next Best Offer")
+    st.title("Two-Stage Next Best Offer Recommender (H&M Personalized Fashion Recommendation)")
     st.caption(
         f"Mode: {mode}. Scoring date: {scoring_date}. "
         f"Ranker run {ranker_run_id[:8]}, classifier run {classifier_run_id[:8]}."
