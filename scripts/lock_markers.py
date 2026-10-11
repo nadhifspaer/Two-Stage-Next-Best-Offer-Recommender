@@ -45,14 +45,14 @@ def env_mismatches(pins):
 def main(write):
     lines = LOCK.read_text().splitlines()
     locked = {
-        canonicalize_name(l.split("==")[0].strip())
-        for l in lines
-        if "==" in l and not l.lstrip().startswith("#")
+        canonicalize_name(line.split("==")[0].strip())
+        for line in lines
+        if "==" in line and not line.lstrip().startswith("#")
     }
     pins = {
-        canonicalize_name(l.split("==")[0].strip()): l.split("==")[1].split(";")[0].strip()
-        for l in lines
-        if "==" in l and not l.lstrip().startswith("#")
+        canonicalize_name(line.split("==")[0].strip()): line.split("==")[1].split(";")[0].strip()
+        for line in lines
+        if "==" in line and not line.lstrip().startswith("#")
     }
     mismatches = env_mismatches(pins)
     if mismatches:
@@ -62,16 +62,16 @@ def main(write):
         return 2
     markers = platform_markers(locked)
     new, bad = [], []
-    for l in lines:
-        if "==" in l and not l.lstrip().startswith("#"):
-            pin = l.split(";")[0].strip()
+    for line in lines:
+        if "==" in line and not line.lstrip().startswith("#"):
+            pin = line.split(";")[0].strip()
             name = canonicalize_name(pin.split("==")[0])
             if name in markers:
                 want = f"{pin} ; {markers[name]}"
-                if l.strip() != want:
+                if line.strip() != want:
                     bad.append(want)
-                l = want
-        new.append(l)
+                line = want
+        new.append(line)
     for b in bad:
         print("platform marker:", b)
     if write:
