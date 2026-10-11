@@ -28,6 +28,8 @@ jobs:
           cache: pip
       - run: pip install --index-url https://download.pytorch.org/whl/cpu torch==2.14.0+cpu
       - run: pip install -r requirements.lock.txt
+      - name: Lockfile platform markers
+        run: python scripts/lock_markers.py
       - name: Pandera schema validation against fixtures
         run: pytest tests/test_schema.py -q
       - name: Leakage tests

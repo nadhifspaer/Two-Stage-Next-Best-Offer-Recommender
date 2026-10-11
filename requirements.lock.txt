@@ -1,4 +1,5 @@
 # generated via `pip freeze` after installing requirements.txt; this is the installed artifact for Docker and CI
+# after every regeneration run `python scripts/lock_markers.py --write` to restore platform markers; see README Setup
 # torch is CPU-only; install it first from the scoped PyTorch CPU index, per https://pytorch.org/get-started/locally/:
 #   pip install --index-url https://download.pytorch.org/whl/cpu torch==2.14.0+cpu
 # then install this file; pip will find the pinned torch already satisfied and never query PyPI for it
@@ -184,7 +185,7 @@ python-multipart==0.0.32
 python-slugify==8.0.4
 python-socketio==5.17.0
 pytz==2026.3.post1
-pywin32==312
+pywin32==312 ; sys_platform == "win32"
 PyYAML==6.0.3
 pyzmq==27.2.0
 readchar==4.2.2
@@ -241,7 +242,7 @@ uncalled-for==0.4.0
 urllib3==2.8.0
 uuid6==2025.0.1
 uvicorn==0.53.0
-waitress==3.0.2
+waitress==3.0.2 ; platform_system == "Windows"
 watchdog==6.0.0
 watchfiles==1.2.0
 wcwidth==0.8.4

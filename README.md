@@ -91,6 +91,15 @@ pip install -r requirements.lock.txt
 
 torch is installed first, CPU-only, from PyTorch's own index so package resolution does not cross between indexes. `requirements.txt` is the readable list of direct dependencies; `requirements.lock.txt` is what actually gets installed.
 
+Regenerating the lockfile:
+
+```
+pip freeze > requirements.lock.txt
+python scripts/lock_markers.py --write
+```
+
+`pip freeze` drops environment markers, so Windows-only pins (pywin32, colorama, waitress) become unconditional and fail on the Linux CI runner. `scripts/lock_markers.py` restores platform markers from installed package metadata and must run after every regeneration. CI runs `python scripts/lock_markers.py` after installing the lockfile and fails if a marker is missing. After regenerating, install the lockfile inside `python:3.11-slim`, since a Windows install passes with or without the markers.
+
 Run the pipeline:
 
 ```
